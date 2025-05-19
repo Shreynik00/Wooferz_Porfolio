@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanchi's Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', Courier, monospace, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #d8b4e3;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 30px;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    #profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .content {
+      text-align: center;
+      padding: 50px;
+    }
+    .content h1 {
+      color: #333;
+    }
+    #typing-text::after {
+      content: "|";
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        padding: 10px;
+        text-align: center;
+      }
+      .content {
+        padding: 30px 10px;
+      }
+      #profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+      footer {
+        padding: 20px 10px;
+      }
+      footer h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Digital Resume</h1>
+  </header>
+  <nav>
+    <a href="#Home">Home</a>
+  </nav>
+
+  <section id="Home">
+    <div class="content">
+      <div style="text-align: center;">
+        <img src="sanchi.jpg" alt="My Photo" id="profile-pic"/>
+      </div>
+      <h2>Hello! I'm <span id="typing-text"></span></h2>
+      <p>Explore my qualifications, experience, and skills.</p>
+      <a href="https://www.linkedin.com/in/sanchi-sharma-54a148321/">
+        <img src="LinkedIn_logo_initials.png" width="30px" height="30px" alt="linkedin"/>
+      </a>
+      <br><br>
+      <a href="sanchi.pdf" download style="color: white; background-color: rgb(116, 72, 138); padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+        Download My Resume
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sanchi Sharma. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const text = "Sanchi .Y. Sharma!";
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 150);
+      }
+    }
+
+    window.onload = typeEffect;
+  </script>
+</body>
+</html>
