@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanchi's Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', Courier, monospace, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      text-align: center;
+      align-items: center;
+    }
+    header {
+      background-color: #d8b4e3;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 30px;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    #profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .content {
+      text-align: center;
+      padding: 50px;
+    }
+    .content h1 {
+      color: #333;
+    }
+    #typing-text::after {
+      content: "|";
+      animation: blink 0.7s infinite;
+    }
+    #Projects {
+      padding: 50px 20px;
+      background-color: #e7dbf2;
+    }
+
+    #Projects h2 {
+      font-size: 28px;
+      color: #c9b3ec;
+      margin-bottom: 30px;
+    }
+
+    .carousel-item {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .carousel-item video {
+      width: 80%;
+      max-width: 600px;
+      max-height: 350px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      outline: none;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(217, 169, 239, 0.934);
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+    footer input{
+    width: 40%;
+    padding: 10px;
+    border: 2px solid #ceaae5; /* A boho brown */
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: #fffaf0;
+    color: #6a5677;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    z-index: 2;
+  }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        padding: 10px;
+        text-align: center;
+      }
+      .content {
+        padding: 30px 10px;
+      }
+      #profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+      footer {
+        padding: 20px 10px;
+      }
+      footer h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <header>
+    <h1>Welcome to My Digital Resume</h1>
+  </header>
+  <nav>
+    <a href="#Home">Home</a>
+    <a href="#Projects">Projects</a>
+    <a href="#ContactUS">Contact Us</a>
+  </nav>
+
+  <section id="Home">
+    <div class="content">
+      <div style="text-align: center;">
+        <img src="sanchi.jpg" alt="My Photo" id="profile-pic"/>
+      </div>
+      <h2>Hello! I'm <span id="typing-text"></span></h2>
+      <p>Explore my qualifications, experience, and skills.</p>
+      <a href="https://www.linkedin.com/in/sanchi-sharma-54a148321/">
+        <img src="LinkedIn_logo_initials.png" width="30px" height="30px" alt="linkedin"/>
+      </a>
+      <br><br>
+      <a href="sanchi.pdf" download style="color: white; background-color: rgb(116, 72, 138); padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+        Download My Resume
+      </a>
+    </div>
+  </section>
+  <section id="Projects"><br><br><br>
+    <h5>Latest Works</h5>
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h9>StopWatch</h9><br>
+            <video controls=""><source src="Stopwatch.mp4" type="video/mp4"></video>
+          </div>
+          <div class="carousel-item">
+            <h9>Weather App</h9><br>
+            <video controls=""> <source src="wwatherapp.mp4" type="video/mp4"></video>
+          </div>
+          <div class="carousel-item">
+            <video controls=""><source src="video.mp4" type="video/mp4"></video>
+          </div>
+          <div class="carousel-item ">
+            <h9>Petshop Project</h9><br>
+            <video controls=""><source src="Swing  petshop SQLITE project.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </section>
+
+  <footer id="ContactUs">
+    <section id="Contact">
+    <div id="collab">
+      <div class="descriptions"><br>
+        <b id="d-collab">Any Ideas To Collab</b><br><br><br><br>
+    
+        <form id="collab-form" onsubmit="return validateForm()">
+          <!-- Name -->
+          <label for="dd-name" id="d-name">Your Name:</label>
+          <input type="text" id="dd-name" name="name" required pattern="[A-Za-z\s]{2,}" title="Enter a valid name (letters only, at least 2 characters)">
+          <br><br>
+    
+          <!-- Email -->
+          <label for="email" id="d-email">Your Email:</label>
+          <input type="email" id="email" name="email" required title="Enter a valid email address">
+          <br><br>
+    
+          <!-- Idea -->
+          <label for="idea-text" id="d-idea">Any Ideas:</label>
+          <textarea id="idea-text" name="idea" required minlength="10" maxlength="500" placeholder="Share your thoughts..."></textarea>
+          <br><br>
+    
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    
+    <footer>
+      <p>&copy; 2025 Sanchi Sharma. All rights reserved.</p>
+    </footer>
+
+  <script>
+     const text = "Sanchi .Y. Sharma!";
+  let index = 0;
+
+  function typeEffect() {
+    if (index < text.length) {
+      document.getElementById("typing-text").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, 150);
+    }
+  }
+
+  window.onload = typeEffect;
+
+  function validateForm() {
+    const name = document.getElementById("dd-name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const idea = document.getElementById("idea-text").value.trim();
+
+    if (name.length < 2) {
+      alert("Name must be at least 2 characters.");
+      return false;
+    }
+
+    const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    if (idea.length < 10) {
+      alert("Please enter at least 10 characters for your idea.");
+      return false;
+    }
+
+    return true; 
+  }
+    
+  </script>
+</body>
+</html>
